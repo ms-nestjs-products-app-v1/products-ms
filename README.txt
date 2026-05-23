@@ -8,6 +8,10 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
         $ npm run start         // Run development
         $ npm run start:dev     // Run watch mode
 
+    - Instalar dependencias
+        + Validation (Validacion de la data)
+            $ npm i --save class-validator class-transformer
+
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
             $ nest g res products --no-spec
@@ -26,7 +30,10 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
                 - Create Product
                     > POST: http://localhost:3000/products                                          Click "Send"
                         > Body | raw (JSON)
-                            { }
+                            {
+                                "name": "Smartphone",
+                                "price": 100
+                            }
                 - Get All Products
                     > GET: http://localhost:3000/products                                           Click "Send"
                 - Get Single Product
