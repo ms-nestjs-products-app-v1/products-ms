@@ -35,6 +35,14 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
             $ nest g res products --no-spec
                 > ? What transport layer do you use? REST API   // Por esta ocacion REST API y no MS!!!
                 > ? Would you like to generate CRUD entry points? (Y/n) y
+
+    - TablePlus
+        + Localizar el archivo en la raiz de la app './dev.db'.
+        + Crear una nueva conexion para SQLite DB (Click '+' | New Connection)
+            > Name: Products MS
+            > SQLite
+            > Select file .sql: {{FILE.sql}}
+            Click 'Test' | 'Save' | 'Connect'
     
     - Postman
         + Crete a new Workspace (Click "New" | "Workspace" > "Blank workspace")
