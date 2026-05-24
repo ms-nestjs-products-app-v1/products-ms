@@ -8,6 +8,18 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
         $ npm run start         // Run development
         $ npm run start:dev     // Run watch mode
 
+    - Prisma CLI
+        + Crea la config inicial
+            $ npx prisma init
+        + Generar los archivos de migración SQL
+            $ npx prisma migrate dev --name init
+        + Instalar prisma client
+            $ npm install @prisma/client
+        + Generar los tipos y el cliente para la app (Ejecutar de nuevo si existe cambios en el esquema)
+            $ npx prisma generate
+        + Instalar el driver adapter para la DB
+            $ npm install @prisma/adapter-better-sqlite3
+
     - Instalar dependencias
         + Validation (Validacion de la data)
             $ npm i --save class-validator class-transformer
@@ -15,6 +27,8 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
             $ npm i dotenv
         + Joi (Vaidador de Schema)
             $ npm i joi
+        + Pisma (ORM)
+            $ npm install prisma --save-dev
 
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
