@@ -11,6 +11,10 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
     - Instalar dependencias
         + Validation (Validacion de la data)
             $ npm i --save class-validator class-transformer
+        + DotENV (Variables de entorno)
+            $ npm i dotenv
+        + Joi (Vaidador de Schema)
+            $ npm i joi
 
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
@@ -28,19 +32,19 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
         + HTTP requests
             * Product (Click "..." > Add folder > Name: "Product")
                 - Create Product
-                    > POST: http://localhost:3000/products                                          Click "Send"
+                    > POST: http://localhost:3001/products                                          Click "Send"
                         > Body | raw (JSON)
                             {
                                 "name": "Smartphone",
                                 "price": 100
                             }
                 - Get All Products
-                    > GET: http://localhost:3000/products                                           Click "Send"
+                    > GET: http://localhost:3001/products                                           Click "Send"
                 - Get Single Product
-                    > GET: http://localhost:3000/products/{{PRODUCT_ID}}                            Click "Send"
+                    > GET: http://localhost:3001/products/{{PRODUCT_ID}}                            Click "Send"
                 - Update Product
-                    > PATCH: http://localhost:3000/products/{{PRODUCT_ID}}                          Click "Send"
+                    > PATCH: http://localhost:3001/products/{{PRODUCT_ID}}                          Click "Send"
                         > Body | raw (JSON)
                             { }
                 - Delete Product
-                    > DELETE: http://localhost:3000/products/{{PRODUCT_ID}}                         Click "Send"
+                    > DELETE: http://localhost:3001/products/{{PRODUCT_ID}}                         Click "Send"
