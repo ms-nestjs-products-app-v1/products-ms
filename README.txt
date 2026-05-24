@@ -62,6 +62,7 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
                             }
                 - Get All Products
                     > GET: http://localhost:3001/products                                           Click "Send"
+                    > GET: http://localhost:3001/products?page=1&limit=10                           Click "Send"
                 - Get Single Product
                     > GET: http://localhost:3001/products/{{PRODUCT_ID}}                            Click "Send"
                 - Update Product
