@@ -68,6 +68,8 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
                 - Update Product
                     > PATCH: http://localhost:3001/products/{{PRODUCT_ID}}                          Click "Send"
                         > Body | raw (JSON)
-                            { }
+                            { 
+                                "name": "Smartphone updated",
+                            }
                 - Delete Product
                     > DELETE: http://localhost:3001/products/{{PRODUCT_ID}}                         Click "Send"
