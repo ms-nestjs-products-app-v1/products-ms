@@ -20,6 +20,15 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
         + Instalar el driver adapter para la DB
             $ npm install @prisma/adapter-better-sqlite3
 
+        + Generar los archivos de migración SQL, tipos y cliente (NOTA: solo si existe cambios en el modelo)
+            $ npx prisma migrate dev --name {{MIGRATE_NAME}}
+            $ npx prisma generate
+            
+            $ npx prisma migrate dev --name available
+            $ npx prisma generate
+            $ npx prisma migrate dev --name available-index
+            $ npx prisma generate
+
     - Instalar dependencias
         + Validation (Validacion de la data)
             $ npm i --save class-validator class-transformer
