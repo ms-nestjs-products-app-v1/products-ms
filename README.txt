@@ -85,3 +85,17 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
                             }
                 - Delete Product
                     > DELETE: http://localhost:3001/products/{{PRODUCT_ID}}                         Click "Send"
+
+    - GitHub
+        + Create new organization (Click "+ v" | "New organization" > Free | Click "Create a free organization")
+            > organization name: {{ORGANIZATION_NAME}}
+            > contact email: {{CONTACT_EMAIL}}
+            > [true] My personal account
+            > [true] I hereby accept Terms of Service....
+            Click "Next" | 
+            Click "Complete setup" | "Skip this step"
+        + Create new repository (Click "New")
+            > {{OWNER_MS_NAME}}/products-ms
+            > Description: {{REPO_DESCRIPTION}}
+            > Public
+            Click "Create repository"
