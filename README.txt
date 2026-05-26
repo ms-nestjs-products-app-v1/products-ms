@@ -45,6 +45,9 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
                 > ? What transport layer do you use? REST API   // Por esta ocacion REST API y no MS!!!
                 > ? Would you like to generate CRUD entry points? (Y/n) y
 
+        + Comenzar a crear microservices
+            $ npm i --save @nestjs/microservices
+
     - TablePlus
         + Localizar el archivo en la raiz de la app './dev.db'.
         + Crear una nueva conexion para SQLite DB (Click '+' | New Connection)

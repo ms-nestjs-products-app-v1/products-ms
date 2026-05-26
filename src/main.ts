@@ -1,11 +1,22 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger, ValidationPipe } from '@nestjs/common';
+import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
 import { AppModule } from './app.module';
 import { envs } from './config';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  // Configurar como microservicio [TCP] (Segunda Forma)
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(
+    AppModule,
+    {
+      transport: Transport.TCP,
+      options: {
+        // Port
+        port: envs.port,
+      },
+    },
+  );
   const logger = new Logger('Bootstrap');
   // Set validations
   app.useGlobalPipes(
@@ -14,8 +25,12 @@ async function bootstrap() {
       forbidNonWhitelisted: true, // Genera un exception
     }),
   );
+
+  // Configuar como microservicio hibrido [REST API y TCP] (Primera Forma)
+  // await app.startAllMicroservices();
+
   // Port
-  await app.listen(envs.port ?? 3001);
-  logger.log(`App running on port ${envs.port}`);
+  await app.listen();
+  logger.log(`Products Microserve running on port ${envs.port}`);
 }
 bootstrap();
