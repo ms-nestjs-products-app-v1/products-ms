@@ -1,4 +1,5 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import { RpcException } from '@nestjs/microservices';
 
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -46,7 +47,7 @@ export class ProductsService {
       where: { id, available: true },
     });
     if (!product) {
-      throw new NotFoundException(`Product with id ${id} not found`);
+      throw new RpcException(`Product with id ${id} not found`);
     }
 
     return product;

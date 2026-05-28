@@ -38,15 +38,14 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
             $ npm i joi
         + Pisma (ORM)
             $ npm install prisma --save-dev
+        + Comenzar a crear microservices
+            $ npm i --save @nestjs/microservices
 
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
             $ nest g res products --no-spec
                 > ? What transport layer do you use? REST API   // Por esta ocacion REST API y no MS!!!
                 > ? Would you like to generate CRUD entry points? (Y/n) y
-
-        + Comenzar a crear microservices
-            $ npm i --save @nestjs/microservices
 
     - TablePlus
         + Localizar el archivo en la raiz de la app './dev.db'.
