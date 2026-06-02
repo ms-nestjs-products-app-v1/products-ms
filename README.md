@@ -25,3 +25,9 @@ Prisma es un ORM (Object Relational Mapper) moderno para Node.js y TypeScript qu
 ## SQLite
 
 SQLite es un sistema de gestión de bases de datos relacional, ligero y embebido que almacena toda la base de datos en un solo archivo.
+
+## NATS
+
+NATS es un sitema de mensajería y comunicación distribuida de alto rendimiento usado para conectar servicios, microservicios y aplicaciones. Su trabajo es actuar como una central de correo ultrarrápido: un servicio envía un mensaje y otro lo recibe sin que ambos necesiten conercarse directamente.
+
+Se usa mucho con NestJS, microservicios y aquitecturas orientadas a eventos.
