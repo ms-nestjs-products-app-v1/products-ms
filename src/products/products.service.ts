@@ -79,4 +79,28 @@ export class ProductsService {
       data: { available: false },
     });
   }
+
+  async validateProducts(ids: number[]) {
+    // Remover los ids duplicados
+    ids = Array.from(new Set(ids));
+
+    const products = await this.prisma.product.findMany({
+      where: {
+        id: {
+          in: ids,
+        },
+      },
+    });
+
+    // Validar la longitud de products y ids
+    if (products.length !== ids.length) {
+      throw new RpcException({
+        message: 'Some products were not found',
+        error: 'Bad Request',
+        statusCode: HttpStatus.BAD_REQUEST, // 400
+      });
+    }
+
+    return products;
+  }
 }
