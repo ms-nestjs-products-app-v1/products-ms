@@ -44,6 +44,8 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
             $ npm install prisma --save-dev
         + Comenzar a crear microservices
             $ npm i --save @nestjs/microservices
+        + NATS (Transporter)
+            $ npm i --save nats
 
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
