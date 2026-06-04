@@ -8,6 +8,10 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
         $ npm run start         // Run development
         $ npm run start:dev     // Run watch mode
 
+    - NATS (NATS Transporter)
+        + Nat Server Run (Docker)
+            $ docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats  // Remove port 6222 for clustering
+
     - Prisma CLI
         + Crea la config inicial
             $ npx prisma init
@@ -40,6 +44,8 @@ PRODUCT MICROSERVICES (NestJS, Prisma and SQLite)
             $ npm install prisma --save-dev
         + Comenzar a crear microservices
             $ npm i --save @nestjs/microservices
+        + NATS (Transporter)
+            $ npm i --save nats
 
     - NestJS CLI
         + Crear un nuevo resource (Sin archivos de test)
